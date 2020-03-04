@@ -1,0 +1,176 @@
+@import "https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap";
+
+:root {
+    --color-green: #50fa7b;
+    --color-rocket: #9031dd;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+body {
+    background: #282a36;
+    color: rgb(255, 255, 255);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    padding: 20px 20px ;
+    border-bottom: 1px solid #333;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+header div{
+    text-align: center;
+}
+
+header div a {
+    color: white;
+    font-size: 18px;
+    line-height: 28px; /* 10px a mais que o font-size*/
+    margin: 0 16px; 
+     /* ou initial */
+}
+
+header div a:hover { /* hover = mouse over*/
+    color: var(--color-green);
+    transition: color 400ms;
+}
+
+#wrapper{
+    text-align: center;
+    padding: 32px;
+}
+
+#wrapper img{
+    border-radius: 50%;
+    border: 5px solid var(--color-green);
+    margin-bottom: 32px;
+    max-height:200px;
+
+}
+
+#wrapper h1{
+    font-size: 38px;
+    line-height: 52px;
+}
+
+#wrapper h2{
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: normal;
+    margin-top: 8px;
+    opacity: 0.7;
+}
+
+#wrapper p{
+    max-width: 500px;
+    margin: 14px auto;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/*cards*/
+
+.cards {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-rocket);
+    border-radius: 40px 40px 40px 40px;
+    width: 100%;
+    
+}
+
+.card_image-container img{
+    width: 100%;
+    border-radius: 40px 0 0 0;
+}
+
+.card_content, 
+.card_info {
+    padding: 15px;
+
+}
+
+.card_content {
+    height: 60px;
+}
+
+.card_info{
+    display: flex;
+    justify-content: space-around;  /*  2 colunas (fr significa flexivel e terao o mesmo tamanho*/
+    align-items: center;
+}
+
+@media(max-width: 500px) {    /* media  query (é assim q escreve??) para responsividade*/
+    .card_info {
+        flex-direction: column;
+    }
+    .card_content {
+        height: 40px;
+    }
+}
+
+.card_price{
+    background-color: var(--color-rocket);
+    filter: brightness(80%);  /* filter tem uma infinade de recursos */
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* - - - - - - - MODAL - - - - - - - */
+
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden
+}
+
+.modal{
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal{
+    color: black;
+    position: absolute; 
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+/* - - - - - - - MODAL ATIVO - - - - - - - */
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+
+}
+
+iframe{
+    width: 100%;
+    height: 90%;
+    top: 5%;
+    position: absolute; /*absolute vai usar como referencia a tela toda ou um pai com position fixed ou relative */
+
+
+}
