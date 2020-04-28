@@ -45,29 +45,30 @@ img#logo-rocketseat{
 h1{
     font-size: 32px;
     line-height: 42px;
-    color: rgb(207, 203, 211);
-    text-shadow: 2px 2px 4px rgb(27, 3, 39);
+    color: rgb(255, 255, 255,0.883);
+    padding: 20px;
 }
+
 h1#content-page{
     font-size: 32px;
     font-weight: normal;
     line-height: 42px;
+    margin: 40px;
     color: rgba(255, 255, 255, 0.76);
 
 }
 
 h2{
+    color: rgba(255,255,255,0.883);
     font-size: 20px;
     line-height: 38px;
-    opacity: 0.8;
     max-width: 500px;
     margin: 10px auto;
-    text-shadow: 1px 1px   black;
 }
-
-h1{
-    padding: 30px;
-}
+p{
+    color: rgba(255,255,255,0.924);
+    font-size: 18px;
+    line-height:28px;
 
 #footer{
     margin: 28px ;
